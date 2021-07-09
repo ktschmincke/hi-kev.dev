@@ -1,0 +1,34 @@
+:root {
+  --color-dark: #333;
+  --color-light: #f9f9f9;
+  --link-color-dark: #0470db;
+  --link-color-light: #29abe2;
+}
+
+@mixin dark-theme {
+  --bg-color: var(--color-dark);
+  --fg-color: var(--color-light);
+  --link-color: var(--link-color-light);
+}
+
+body {
+  --bg-color: var(--color-light);
+  --fg-color: var(--color-dark);
+  --link-color: var(--link-color-dark);
+
+  @media (prefers-color-scheme: dark) {
+    @include dark-theme;
+  }
+}
+
+body.dark {
+  @include dark-theme;
+}
+
+$breakpoints: (
+  'sm': 30em,
+);
+
+@function breakpoint($breakpoint) {
+  @return map-get($map: $breakpoints, $key: $breakpoint);
+}

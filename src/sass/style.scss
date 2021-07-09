@@ -1,4 +1,63 @@
-body {
+@import './variables';
+
+html {
+  height: 100vh;
   font-family: sans-serif;
-  background-color: #f9f9f9;
+  line-height: 1.4;
+  font-size: calc(1em + 0.33vw);
 }
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  max-width: 60ch;
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-width: none;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.03ch;
+}
+
+a:not([class]) {
+  color: var(--link-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.print-only {
+  display: none;
+
+  @media print {
+    display: block;
+  }
+}
+
+@import './layouts';
+@import './blocks';

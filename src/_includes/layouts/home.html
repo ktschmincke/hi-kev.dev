@@ -1,0 +1,17 @@
+---
+layout: layouts/base.html
+---
+
+<header class="[ header ] [ wrapper ]" data-size="sm">
+  <h1 class="header__heading">{{title}}</h1>
+</header>
+
+<article class="[ intro ] [ wrapper ]" data-size="sm">
+
+  <img alt="{{imgAlt}}" src="{{imgSrc}}" class="intro__img" height="250px" width="250px">
+
+  <div class="intro__body">
+    {{content | safe}}
+  </div>
+
+</article>

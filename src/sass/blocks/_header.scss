@@ -1,0 +1,7 @@
+.header {
+  @media (max-width: breakpoint('sm')) {
+    &__heading {
+      text-align: center;
+    }
+  }
+}

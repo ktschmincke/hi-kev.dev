@@ -1,0 +1,132 @@
+---
+layout: 'layouts/base.html'
+name: 'Kevin Schmincke'
+email: 'ktschmincke@gmail.com'
+phone: '(410) 703-8862'
+summary: I am a front-end developer of 9 years with a focus on user experience, accessibility, and human-centered design. I pride myself on collaborating closely and effectively with UX designers to craft the perfect implementation for their vision.
+skills:
+  - JavaScript
+  - TypeScript
+  - Semantic HTML
+  - Accessibility design
+  - CSS
+  - SASS (SCSS)
+  - Angular
+  - Interaction Design
+  - Node.js
+  - MongoDB
+
+experience:
+  - company: Asymmetrik
+    title: 'Software Engineer'
+    time: 'April 2017 - Present'
+    items:
+      - Overhauled a government-facing product to meet WCAG 2.1 accessibility standards and comply with Section 508 requirements.
+      - Worked closely with UX designers to implement usable and useful user interfaces.
+      - Designed new features with an emphasis on usability and user experience.
+      - Participated in user interviews and usability tests.
+      - Frequently answered user support calls and emails.
+      - Mentored several junior developers and taught accessibility and CSS layout architecture.
+  - company: Leidos
+    title: 'Software Engineer'
+    time: 'May 2013 - April 2017'
+    items:
+      - Designed and built a natural language processing analytic application using Python and AngularJS along with data visualization libraries Cesium and D3.
+      - Integrated unit testing using Jasmine and Karma. Used Protractor for end-to-end testing.
+      - Co-authored a research paper pending publication by the IEEE.
+      - Drafted UI designs which were approved and endorsed by the customer for multiple complete pages within the application.
+      - Provided UI support for more than a dozen other developers.
+  - company: SAIC
+    title: 'Software Engineer Intern'
+    time: 'June 2012 - May 2013'
+    items:
+      - Designed and developed software for an internal research and development project used for ingesting and processing big data.
+      - Used Java, Ruby, HTML, and JavaScript for systems and UI development.
+      - Built a framework to automate complete system integration testing using Java and integrated with AWS EC2 and S3.
+      - Designed software with Ruby to extract key metrics and data from a Jenkins continuous integration server and make them highly visible for developers.
+
+education:
+  - school: 'University of Maryland, Baltimore County'
+    location: 'Baltimore, MD'
+    degrees:
+      - 'B.S. Computer Science'
+    time: 'August 2011 - December 2013'
+  - school: 'Anne Arundel Community College'
+    location: 'Arnold, MD'
+    degrees:
+      - 'A.S. Computer Science'
+      - 'A.S. Mathematics'
+    time: 'August 2009 - May 2011'
+
+certifications:
+  - name: 'NN/g UX Training Certification'
+    organization: 'Nielsen Norman Group'
+    description: 'Courses from the world-leading UX Firm included interaction design, usability, and cognitive psychology'
+    date: 'April 2020'
+
+training:
+  - name: 'Building Web Applications with AngularJS'
+    organization: 'Learning Tree International'
+    date: 'January 2015'
+  - name: 'ECMAScript Programming: The Next Generation Javascript'
+    organization: 'Learning Tree International'
+    date: 'December 2016'
+---
+
+<article class="wrapper flow" data-size="small">
+
+  <div class="print-only">
+    <h1>{{name}}</h1>
+    <p>{{email}}</p>
+    <p>{{phone}}</p>
+  </div>
+
+  <h2>Summary</h2>
+  <p>{{summary}}</p>
+
+  <h2>Skills</h2>
+  <ul class="skills">
+    {% for skill in skills %}
+      <li>{{skill}}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Experience</h2>
+  {% for job in experience %}
+    <h3>{{job.company}}</h3>
+    <p>{{job.title}}</p>
+    <p>{{job.time}}</p>
+
+    <ul>
+      {% for item in job.items %}
+        <li>{{item}}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+  <h2>Education</h2>
+  {% for item in education %}
+    <h3>{{item.school}}</h3>
+    <ul>
+      {% for degree in item.degrees %}
+      <li>{{degree}}</li>
+      {% endfor %}
+    </ul>
+    <p>{{item.time}}
+  {% endfor %}
+
+  <h2>Certifications</h2>
+  {% for item in certifications %}
+    <h3>{{item.name}}</h3>
+    <p>{{item.organization}}</p>
+    <p>{{item.date}}</p>
+  {% endfor %}
+
+  <h2>Training</h2>
+  {% for item in training %}
+    <h3>{{item.name}}</h3>
+    <p>{{item.organization}}</p>
+    <p>{{item.date}}</p>
+  {% endfor %}
+
+</article>

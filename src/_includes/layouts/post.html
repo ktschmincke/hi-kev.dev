@@ -1,0 +1,15 @@
+---
+layout: layouts/base.html
+---
+
+<div class="wrapper">
+  <ul>
+    {% for tag in tags %}
+      <li>{{tag}}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<article class="wrapper">
+  {{content | safe}}
+</article>
