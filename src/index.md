@@ -1,5 +1,5 @@
 ---
-layout: layouts/home.html
+layout: layouts/home.njk
 title: Hi, I'm Kevin!
 imgAlt: "A headshot of me in black and white. I'm smiling and looking slightly up."
 imgSrc: 'assets/me.jpg'

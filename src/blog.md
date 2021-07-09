@@ -1,4 +1,4 @@
 ---
 title: blog
-layout: layouts/blog.html
+layout: layouts/blog.njk
 ---
