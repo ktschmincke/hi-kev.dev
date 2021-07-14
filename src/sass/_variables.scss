@@ -28,6 +28,7 @@ body.dark {
 
 $breakpoints: (
   'sm': 30em,
+  'md': 60em,
 );
 
 @function breakpoint($breakpoint) {

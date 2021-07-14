@@ -1,4 +1,5 @@
 [
   { "url": "/", "title": "Home" },
-  { "url": "/experience/", "title": "Experience" }
+  { "url": "/experience/", "title": "Experience" },
+  { "url": "/contact/", "title": "Contact" }
 ]

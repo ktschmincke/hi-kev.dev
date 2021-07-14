@@ -1,3 +1,5 @@
+@import './variables';
+
 .name {
   font-size: 2.5rem;
   letter-spacing: -0.05ch;
@@ -8,9 +10,13 @@
 }
 
 .skills {
-  columns: 2;
-  column-gap: 2rem;
-  width: max-content;
+  padding-left: 1rem;
+
+  @media (min-width: breakpoint('sm')) {
+    columns: 2;
+    column-gap: 2rem;
+    width: max-content;
+  }
 }
 
 .contact {
@@ -58,16 +64,21 @@
 }
 
 @media print {
-  .wrapper.wrapper {
-    --wrapper-width: 60rem;
+  html {
+    font-size: 1rem;
   }
 
   body {
     background-color: #fff;
     color: #333;
+    display: block;
   }
 
   body > :not(main) {
     display: none;
+  }
+
+  * {
+    max-width: none;
   }
 }

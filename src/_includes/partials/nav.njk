@@ -1,8 +1,8 @@
-<nav class="[ nav ] [ wrapper ]">
-  <ul>
+<nav class="[ nav ] [  ]" data-size="sm">
+  <ul class="unstyled-list">
     {% for item in nav %}
       <li {% if item.url === page.url %} aria-current="page" {% endif %}>
-        <a href="{{item.url | url}}">
+        <a href="{{item.url | url}}" tabindex="{% if item.url === page.url %} -1 {% else %} 0 {% endif %}">
           {{item.title}}
         </a>
       </li>
