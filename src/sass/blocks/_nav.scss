@@ -1,0 +1,20 @@
+.nav {
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+  }
+
+  [aria-current='page'] {
+    filter: invert(100%);
+    font-weight: bold;
+
+    > a {
+      text-decoration-line: underline overline;
+      text-decoration-thickness: 0.25em;
+      text-decoration-skip-ink: none;
+    }
+  }
+}

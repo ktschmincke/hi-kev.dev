@@ -1,0 +1,35 @@
+/**
+ * Adds even space between block level elements
+ * and no extraneous space outside the group
+ *
+ * Example usage:
+ * <div class="flow">
+ *   <div><!-- content --></div>
+ *   <div><!-- content --></div>
+ *   <div><!-- content --></div>
+ * </div>
+ */
+
+.flow > * + *,
+.flow-v > * + * {
+  margin-top: 1.2rem;
+  margin-top: var(--flow-space, 1.2rem);
+}
+
+/**
+ * Adds even space between inline level elements
+ * and no extraneous space outside the group
+ *
+ * Example usage:
+ * <div class="flow">
+ *   <span><!-- content --></span>
+ *   <span><!-- content --></span>
+ *   <span><!-- content --></span>
+ * </div>
+ */
+
+.flow-inline > * + *,
+.flow-h > * + * {
+  margin-left: 1em;
+  margin-left: var(--flow-space, 1em);
+}

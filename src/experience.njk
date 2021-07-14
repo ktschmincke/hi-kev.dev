@@ -73,12 +73,15 @@ training:
     date: 'December 2016'
 ---
 
-<article class="wrapper flow" data-size="small">
 
-  <div class="print-only">
-    <h1>{{name}}</h1>
-    <p>{{email}}</p>
-    <p>{{phone}}</p>
+<article class="wrapper" data-size="sm">
+  <div class="[ contact ] [ print-only ]">
+    <h1 class="name">{{name}}</h1>
+    <div class="contact__info">
+      <a href="mailto:{{email}}">{{email}}</a>
+      <p>{{phone}}</p>
+      <a href="https://{{metadata.url | url}}">{{metadata.url}}</a>
+    </div>
   </div>
 
   <h2>Summary</h2>
@@ -92,41 +95,79 @@ training:
   </ul>
 
   <h2>Experience</h2>
-  {% for job in experience %}
-    <h3>{{job.company}}</h3>
-    <p>{{job.title}}</p>
-    <p>{{job.time}}</p>
+  <ul class="[ unstyled-list ] [ flow ]">
+    {% for job in experience %}
+      <li class="[ experience ] [ flow ]">
+        <div class="experience__header">
+          <strong>
+            <span class="experience__primary">{{job.company}}</span>
+            &mdash;
+            <em>{{job.title}}</em>
+          </strong>
 
-    <ul>
-      {% for item in job.items %}
-        <li>{{item}}</li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
+          <p class="experience__time">{{job.time}}</p>
+        </div>
+
+        <ul class="experience__items">
+          {% for item in job.items %}
+            <li>{{item}}</li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
 
   <h2>Education</h2>
-  {% for item in education %}
-    <h3>{{item.school}}</h3>
-    <ul>
-      {% for degree in item.degrees %}
-      <li>{{degree}}</li>
-      {% endfor %}
-    </ul>
-    <p>{{item.time}}
-  {% endfor %}
+  <ul class="[ unstyled-list ] [ flow ]">
+    {% for item in education %}
+      <li class="experience">
+        <div class="experience__header">
+          <strong>
+            <span class="experience__primary">{{item.school}}</span>
+            &mdash;
+            <ul class="[ experience__ed-degrees ] [ unstyled-list d-inline ]">
+              {% for degree in item.degrees %}
+                <li class="d-inline"><em>{{degree}}</em></li>
+              {% endfor %}
+            </ul>
+          </strong>
+          <p class="experience__time">{{item.time}}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
 
   <h2>Certifications</h2>
-  {% for item in certifications %}
-    <h3>{{item.name}}</h3>
-    <p>{{item.organization}}</p>
-    <p>{{item.date}}</p>
-  {% endfor %}
+  <ul class="[ unstyled-list ] [ flow ]">
+    {% for item in certifications %}
+      <li class="experience">
+        <div class="experience__header">
+          <strong>
+            <span class="experience__primary">{{item.name}}</span>
+            &mdash;
+            <em>{{item.organization}}</em>
+          </strong>
+
+          <p class="experience__time">{{item.date}}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
 
   <h2>Training</h2>
-  {% for item in training %}
-    <h3>{{item.name}}</h3>
-    <p>{{item.organization}}</p>
-    <p>{{item.date}}</p>
-  {% endfor %}
+  <ul class="[ unstyled-list ] [ flow ]">
+    {% for item in training %}
+      <li class="experience">
+        <div class="experience__header">
+          <strong>
+            <span class="experience__primary">{{item.name}}</span>
+            &mdash;
+            <em>{{item.organization}}</em>
+          </strong>
+          <p class="experience__time">{{item.date}}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
 
 </article>

@@ -1,8 +1,9 @@
+@import './reset';
 @import './variables';
 
 html {
   height: 100vh;
-  font-family: sans-serif;
+  font-family: system-ui;
   line-height: 1.4;
   font-size: calc(1em + 0.33vw);
 }
@@ -15,12 +16,6 @@ body {
   color: var(--fg-color);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 * {
   max-width: 60ch;
 }
@@ -31,18 +26,31 @@ div,
 header,
 nav,
 main,
-footer {
+footer,
+ul {
   max-width: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: 0.03ch;
 }
 
+article > * + * {
+  margin-top: 1.4rem;
+}
+
+article > * + :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 2rem;
+}
+
 a:not([class]) {
   color: var(--link-color);
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 2px;
 }
 
 img {
@@ -61,3 +69,4 @@ img {
 
 @import './layouts';
 @import './blocks';
+@import './utilities';

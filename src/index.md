@@ -9,4 +9,4 @@ I am a front-end developer with a focus on user experience, accessibility, and h
 
 My front-end skills form the vertical bar on my [T-shaped skillset](https://en.wikipedia.org/wiki/T-shaped_skills), or my depth of knowledge. The horizontal bar of the T &mdash; representing my breadth of knowledge &mdash; encompasses all facets of software development.
 
-I'm always seeking opportunities to learn and to teach. My career has been shaped by mentoring and knowledge sharing in both directions.
+I'm always seeking opportunities to learn and to teach. My career has been shaped by mentoring and knowledge sharing in both directions. Check out [my experience](/experience).

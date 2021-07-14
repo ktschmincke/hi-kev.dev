@@ -1,10 +1,72 @@
+.name {
+  font-size: 2.5rem;
+  letter-spacing: -0.05ch;
+
+  &::first-letter {
+    color: var(--color-accent);
+  }
+}
+
 .skills {
   columns: 2;
   column-gap: 2rem;
   width: max-content;
 }
 
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__info {
+    text-align: right;
+  }
+}
+
+.experience {
+  &__header {
+    font-family: 'Courier New', Courier, monospace;
+
+    strong {
+      font-size: 1.2rem;
+      line-height: 1.1;
+    }
+  }
+
+  &__primary {
+    color: var(--color-accent);
+  }
+
+  &__items {
+    padding-left: 1rem;
+    margin: 0;
+    list-style: disc;
+  }
+
+  &__time {
+    margin: 0.5rem 0;
+  }
+
+  &__ed-degrees > li:not(:last-child)::after {
+    content: ', ';
+  }
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+}
+
 @media print {
+  .wrapper.wrapper {
+    --wrapper-width: 60rem;
+  }
+
+  body {
+    background-color: #fff;
+    color: #333;
+  }
+
   body > :not(main) {
     display: none;
   }

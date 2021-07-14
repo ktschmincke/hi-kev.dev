@@ -1,0 +1,15 @@
+$display-properties: (
+  block,
+  inline,
+  inline-block,
+  none,
+  flex,
+  inline-flex,
+  grid
+);
+
+@each $prop in $display-properties {
+  .d-#{$prop} {
+    display: $prop;
+  }
+}
