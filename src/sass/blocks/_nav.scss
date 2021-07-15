@@ -1,6 +1,11 @@
 .nav {
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
   li + li {
-    margin-top: 1rem;
+    margin-left: 1rem;
   }
 
   [aria-current='page'] {
@@ -8,8 +13,7 @@
     font-weight: bold;
 
     > a {
-      outline: 3px dashed currentColor;
-      outline-offset: 0.5rem;
+      text-decoration-line: overline;
     }
   }
 }

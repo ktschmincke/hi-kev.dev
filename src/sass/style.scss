@@ -14,30 +14,14 @@ body {
   padding: 2rem clamp(2rem, 6vw, 10rem);
   background-color: var(--bg-color);
   color: var(--fg-color);
-
-  grid-template-columns: 1fr min(35rem, 100%) 1fr;
-  grid-template-rows: auto 1fr;
-  gap: 1rem;
-
-  > nav {
-    grid-column: 1;
-  }
-
-  > main {
-    grid-column: 2;
-  }
-
-  @media (min-width: breakpoint('md')) {
-    display: grid;
-  }
 }
 
 .full-bleed {
-  grid-column: 1 / 4;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   max-width: none;
-  margin-left: -2rem;
-  margin-right: -2rem;
 }
+
 
 :focus {
   outline: 2px solid currentColor;

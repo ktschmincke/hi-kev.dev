@@ -1,0 +1,12 @@
+.site-grid {
+  display: grid;
+
+  > * {
+    grid-column: 2;
+  }
+
+  @media (min-width: breakpoint('sm')) {
+    grid-template-columns: 1fr min(35rem, 100%) 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}

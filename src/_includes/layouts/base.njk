@@ -9,15 +9,17 @@
   <link rel="stylesheet" href="{{ '/css/resume.css' | url }}" />
 </head>
 
-<body>
+<body class="site-grid">
 
   <a href="#main-content" class="skip-link full-bleed">Skip to main content</a>
-
-  {% include 'partials/nav.njk' %}
 
   <main id="main-content">
     {{ content | safe }}
   </main>
+
+  <footer>
+    {% include 'partials/nav.njk' %}
+  </footer>
 </body>
 
 </html>
