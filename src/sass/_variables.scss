@@ -3,19 +3,22 @@
   --color-light: #f9f9f9;
   --link-color-dark: #0470db;
   --link-color-light: #29abe2;
-  --color-accent: #b40332;
+  --red: #b40332;
+  --pink: #e8b3c1;
 }
 
 @mixin dark-theme {
   --bg-color: var(--color-dark);
   --fg-color: var(--color-light);
   --link-color: var(--link-color-light);
+  --color-accent: var(--pink);
 }
 
 body {
   --bg-color: var(--color-light);
   --fg-color: var(--color-dark);
   --link-color: var(--link-color-dark);
+  --color-accent: var(--red);
 
   @media (prefers-color-scheme: dark) {
     @include dark-theme;
