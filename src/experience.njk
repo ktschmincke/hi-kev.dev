@@ -2,7 +2,6 @@
 layout: 'layouts/base.njk'
 name: 'Kevin Schmincke'
 email: 'ktschmincke@gmail.com'
-phone: '(410) 703-8862'
 summary: I am a front-end developer of 9 years with a focus on user experience, accessibility, and human-centered design. I pride myself on collaborating closely and effectively with UX designers to craft the perfect implementation for their vision.
 skills:
   - JavaScript
@@ -17,9 +16,17 @@ skills:
   - MongoDB
 
 experience:
+  - company: Kion
+    title: 'Senior Front End Engineer'
+    time: 'August 2021 - Present'
+    items:
+      - Quickly took ownership of the front end of a complex cloud enablement platform
+      - Reworked the application's UI to support a large rebrand effort, folding in design tokens to ease maintenance
+      - Enforced and advocated for accessibility practices on the product
+      - Worked closely with the design team to build up a design system
   - company: Asymmetrik
     title: 'Software Engineer'
-    time: 'April 2017 - Present'
+    time: 'April 2017 - August 2021'
     items:
       - Overhauled a government-facing product to meet WCAG 2.1 accessibility standards and comply with Section 508 requirements.
       - Worked closely with UX designers to implement usable and useful user interfaces.
@@ -81,7 +88,7 @@ training:
     <h1 class="name">{{name}}</h1>
     <div class="contact__info">
       <a href="mailto:{{email}}">{{email}}</a>
-      <p>{{phone}}</p>
+      <br>
       <a href="https://{{metadata.url | url}}">{{metadata.url}}</a>
     </div>
   </div>
