@@ -1,0 +1,20 @@
+---
+layout: 'layouts/base.njk'
+projects:
+  - url: 'worble.netlify.app'
+    title: 'Worble'
+    description: 'A clone of the popular Wordle game written in Svelte.'
+    github: 'https://github.com/ktschmincke/worble'
+---
+
+<h1>Projects</h1>
+
+<ul>
+  {% for proj in projects %}
+    <li>
+      <p><a href="https://{{proj.url}}">{{proj.title}}</a></p>
+      <p>{{proj.description}}</p>
+      <p>GitHub repo: <a href="{{proj.github}}">{{proj.github}}</a></p>
+    </li>
+  {% endfor %}
+</ul>
