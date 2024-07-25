@@ -2,36 +2,30 @@
 layout: 'layouts/base.njk'
 name: 'Kevin Schmincke'
 email: 'ktschmincke@gmail.com'
-summary: I am a front-end developer of over 10 years with a focus on user experience, accessibility, and human-centered design. I pride myself on collaborating closely and effectively with UX designers to craft the perfect implementation for their vision.
+summary: I am a front-end developer of over 12 years with a focus on user experience, accessibility, and human-centered design. I pride myself on collaborating closely and effectively with UX designers to craft the perfect implementation for their vision.
 skills:
-  - JavaScript
-  - TypeScript
-  - Semantic HTML
-  - Accessibility design
-  - CSS
-  - SASS (SCSS)
+  - JavaScript/TypeScript
   - Angular
-  - Interaction Design
-  - Node.js
+  - Semantic HTML
+  - CSS/Sass
+  - Go
+  - MySQL
   - MongoDB
+  - Node.js
+  - Accessibility design
+  - Interaction Design
 
 experience:
   - company: Kion
-    title: 'Technical Lead'
-    time: 'March 2022 - Present'
+    title: 'Technical Lead, Senior Front End Engineer'
+    time: 'August 2021 - Present'
     items:
-      - Championed front-end architecture for several large features
-      - Influenced the technical direction of the project
-      - Managed a small team of direct reports
-      - Facilitated strong communication among the design and engineering department
-  - company: Kion
-    title: 'Senior Front End Engineer'
-    time: 'August 2021 - February 2022'
-    items:
-      - Quickly took ownership of the front end of a complex cloud enablement platform
-      - Reworked the application's UI to support a large rebrand effort, folding in design tokens to ease maintenance
-      - Enforced and advocated for accessibility practices on the product
-      - Worked closely with the design team to build up a design system
+      - Quickly took ownership of the front end of a complex cloud enablement platform.
+      - Championed front-end architecture for several large features.
+      - Managed the identity and governance product team.
+      - Led design system efforts to enable developers to move faster with frontend development.
+      - Reworked the application's UI to support a large rebrand effort, folding in design tokens to ease maintenance.
+      - Enforced and advocated for accessibility practices on the product.
   - company: Asymmetrik
     title: 'Software Engineer'
     time: 'April 2017 - August 2021'
@@ -80,12 +74,6 @@ certifications:
     date: 'April 2020'
 
 training:
-  - name: 'Building Web Applications with AngularJS'
-    organization: 'Learning Tree International'
-    date: 'January 2015'
-  - name: 'ECMAScript Programming: The Next Generation Javascript'
-    organization: 'Learning Tree International'
-    date: 'December 2016'
 ---
 
 
@@ -96,8 +84,6 @@ training:
     <h1 class="name">{{name}}</h1>
     <div class="contact__info">
       <a href="mailto:{{email}}">{{email}}</a>
-      <br>
-      <a href="https://{{metadata.url | url}}">{{metadata.url}}</a>
     </div>
   </div>
 
@@ -173,7 +159,9 @@ training:
     {% endfor %}
   </ul>
 
-  <h2>Training</h2>
+  {% if training.length > 0 %}
+    <h2>Training</h2>
+  {% endif %}
   <ul class="[ unstyled-list ] [ flow ]">
     {% for item in training %}
       <li class="experience">
